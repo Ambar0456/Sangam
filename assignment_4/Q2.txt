@@ -1,0 +1,41 @@
+Q2.List down common security vulnerabilities in PHP and explain them in detail ?
+
+-->  1•SQL Injection
+   SQL injection occurs when an attacker manipulates a SQL query by injecting malicious SQL code into an input field. 
+   This can lead to unauthorized access to the database, data leakage, or even data modification/deletion. 
+
+2• Cross-Site Scripting(XSS)
+XSS occurs when an attacker injects malicious scripts (usually JavaScript) into web pages that are then executed in a user's browser. 
+This can steal cookies, session data, or perform actions on behalf of the user.
+
+3• Cross-Site Request Forgery (CSRF)
+CSRF forces a logged-in user to perform unwanted actions on a site 
+where they are authenticated, leading to data modification or account hijacking.
+
+4• Remote Code Execution
+RCE allows attackers to execute arbitrary code on a server, leading to a complete system compromise.
+
+
+5• File Upload Vulnerabilities
+File upload vulnerabilities occur when an attacker uploads a malicious file to a server, 
+leading to security risks such as Remote Code Execution (RCE),
+Local File Inclusion (LFI), Directory Traversal, or Denial of Service (DoS).
+
+
+6• Session Hijacking
+Attackers steal a session ID and impersonate a logged-in user.
+
+Prevention:
+
+Use secure and HttpOnly cookies.
+Implement session_regenerate_id() on login.
+Use same-site cookies to prevent CSRF.
+
+
+10• Weak Password Hashing
+Storing passwords in plain text or using weak hashing (e.g., MD5, SHA1) makes them easy to crack.
+
+Prevention:
+
+Use password_hash() with Bcrypt or Argon2.
+Enforce strong password policies.
